@@ -1,0 +1,245 @@
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>Document</title>
+      <style>
+              body,html {height:100%;overflow:hidden;}
+              body
+              {
+                padding-top: 30px;
+                padding-right: 10px;
+                justify-content:space-between;
+                display:flex;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
+              }
+              /* .container{
+                background-color: rgb(0, 0, 0);
+              
+              } */
+              /* a:hover {
+                    color: #111;
+                    background: #39ff14;
+                    box-shadow: 0 0 20px #39ff14;
+                } */
+              /* #grad {
+              background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+              } */
+              section{
+                margin-top: 80px;
+                
+                background-color: rgb(255, 255, 255);
+                border-radius: 10px;
+              }
+              .drawing-board{
+                margin-top: 60px;
+                margin-right: 65px;
+                width: 1160px;
+                height: 570px;
+                background-color: #fff;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #56509b;
+                border-radius: 5px;
+              }
+              button{
+                margin: 0.5px;
+                background-color: white;
+                width: 40px;
+                height:40px;
+                border-radius: 0;
+                
+              }
+              .draw{
+                margin: 1px;
+                /* margin:auto; */
+                margin-bottom: 3px;
+                height: 70px;
+                width : 70px;
+                background: #56509b;
+                border: 1px solid #56509b;
+                border-radius: 15px;
+                box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+                box-sizing: border-box;
+                color: #FFFFFF;
+                cursor: pointer;
+                display: inline-block;
+                font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 16px;
+                min-height: 40px;
+                outline: 0;
+                text-align: center;
+                text-rendering: geometricprecision;
+                text-transform: none;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                vertical-align: middle;
+              }
+              .draw:hover,.draw:active {
+              background-color: initial;
+              background-position: 0 0;
+              color: #56509b;
+              }
+
+              .draw:active {
+              opacity: .5;
+              }
+            
+              .color-board{
+                width: 200px;
+                display: flex;
+                flex-wrap: wrap;
+                height: 500px;
+                background-color: initial;
+
+              }
+              .row{
+                margin-top: 50px;
+                padding-left: 10px;
+                padding-top: 5px;
+                flex-wrap: wrap;
+                height: 450px;
+                align-items: center;
+                justify-content: space-between;
+                width: 150px;
+                /* border: solid #56509b 2px;
+                border-radius: 15px; */
+                border-radius: 20px;
+                border: 1px solid rgba(255,255,255,.1);
+                /* transform: rotate(45deg); */
+                background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%,rgba(0,0,0,0.05) 100%); 
+            
+              }
+              .navigate{
+                /* background-color: white; */
+                height: 60px;
+                width: 510px;
+                padding-top: 5px;
+                padding-left: 5px;
+                padding-left: 10px;
+                position: absolute;
+                margin-left: 535px;
+                margin-top: -15px;
+                display: block;
+                /* border: solid #56509b 2px;
+                border-radius: 15px; */
+                border: 1px solid rgba(255,255,255,.1);
+                /* transform: rotate(45deg); */
+                border-radius: 20px;
+                background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%,rgba(0,0,0,0.05) 100%); 
+              }
+              .style2 {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background-color: transparent;
+                    width: 35px;
+                    height: 35px;
+                    border: none;
+                    cursor: pointer;
+                  }
+                  .style2::-webkit-color-swatch {
+                    border-radius: 30%;
+                    border: 2px solid #000000;
+                  }
+                  .style2::-moz-color-swatch {
+                    border-radius: 30%;
+                    border: 2px solid #000000;
+                  }
+                  .drawNav{
+                margin: 1px;
+                /* margin:auto; */
+                margin-bottom: 3px;
+                height: 70px;
+                width : 70px;
+                background: #56509b;
+                border: 1px solid #56509b;
+                border-radius: 35px;
+                box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+                box-sizing: border-box;
+                color: #FFFFFF;
+                cursor: pointer;
+                display: inline-block;
+                font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 16px;
+                min-height: 40px;
+                outline: 0;
+                text-align: center;
+                text-rendering: geometricprecision;
+                text-transform: none;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                vertical-align: middle;
+              }
+              .drawNav:hover,.drawNav:active {
+              background-color: initial;
+              background-position: 0 0;
+              color: #56509b;
+              }
+
+              .draw:active {
+              opacity: .5;
+              }
+          
+      </style>
+  </head>
+  <body>
+    
+
+
+  <div class="navigate">
+
+    
+    <button class="draw" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;">    <input type="color" class="style2" id="fill" value="white" ></button>
+    <button (click)="shape('rectangle')" class="drawNav" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;">▭</button> 
+    <button (click)="shape('square')" class="drawNav" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;">▢</button>
+    <button (click)="shape('circle')" class="drawNav" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;"><i class="fa fa-circle-thin"></i></button>
+    <button (click)="shape('ellipse')" class="drawNav" style="font-size: 40px; width: 50px; border-radius: 30px; height: 50px;">⬭</button>
+    <button (click)="shape('lineSegment')" class="drawNav" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;">╱</button>
+    <button (click)="shape('triangle')" class="drawNav" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;">△</button>
+    <button (click)="free_drawing()" class="drawNav" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;"><i class="fa fa-pencil"></i></button>
+    <button (click)="kill_free_drawing()" class="drawNav" style="font-size: 30px; width: 50px; border-radius: 30px; height: 50px;"><i class="fa fa-mouse-pointer"></i></button>
+
+  </div>
+  <section class="color-board">
+      <div class="row">
+
+          <button (click)="undo()" class="draw" ><i class="fa fa-rotate-left"></i></button>
+          <button (click)="redo()" class="draw"> <i class="fa fa-rotate-right" ></i></button>
+          <button (click)="copy()" class="draw"><i class="fa fa-copy"></i></button>
+          <button (click)="paste()" class="draw"><i class="fa fa-paste"></i></button>
+          <button (click)="change_fill_colour()" class="draw" ><i class="material-icons">format_color_fill</i></button>
+          <button (click)="change_Stroke_colour()" class="draw"><i class="material-icons">border_color</i></button>
+          <button (click)="clear(true,true)" class="draw">Clear</button>
+          <button (click)="deletee()" class="draw"><i class="fa fa-trash-o"></i></button>  
+          
+          
+          <button (click)="save('json')" class="draw"><i class="fa fa-save"></i><br> json</button>
+          <button (click)="save('xml')" class="draw"><i class="fa fa-save"></i><br> xml</button>
+          <button (click)="load('json')" class="draw"><i class="fa fa-folder-open-o"></i><br> json</button>
+          <button (click)="load('xml')" class="draw"><i class="fa fa-folder-open-o"></i><br> xml</button>
+          
+          
+      </div>
+    </section>
+    <div id="container" class="drawing-board">
+
+    </div>
+    </body>
+    </html>
+
+
+  
+  
